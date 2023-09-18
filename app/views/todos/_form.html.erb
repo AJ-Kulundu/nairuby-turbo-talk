@@ -1,0 +1,10 @@
+<%= form_with model: todo do |f| %>
+    <div class="flex flex-row justify-between w-full items-center">
+        <div class="">
+            <%= f.text_field :todo, placeholder: "Input Todo" %>
+        </div>
+        <div class="px-4 py-2 bg-lime-500 rounded-lg">
+            <%= f.submit %>
+        </div>
+    </div>
+<%end%>
