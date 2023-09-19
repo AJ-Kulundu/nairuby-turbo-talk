@@ -15,7 +15,10 @@ class TodosController < ApplicationController
     def create
         @todo = Todo.new(todo_params)
         if @todo.save
-            redirect_to todo_path(@todo)
+            respond_to do |format|
+                format.html {redirect_to todo_path(@todo)}
+                format.turbo_stream
+            end
         else
             render :new
         end
