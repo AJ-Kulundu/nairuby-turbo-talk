@@ -9,6 +9,7 @@
 
 <%= turbo_frame_tag Todo.new %>
 
-<div>
-<%= render @todos %>
+<div class="flex flex-col space-y-4">
+    <%= render "todos/empty"%>
+    <%= render @todos %>
 </div>
