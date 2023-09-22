@@ -37,7 +37,10 @@ class TodosController < ApplicationController
     def destroy
         @todo = Todo.find(params[:id])
         @todo.destroy
-        redirect_to todos_path
+        respond_to do |format|
+            format.html {redirect_to todos_path}
+            format.turbo_stream
+        end
     end
 
     private
