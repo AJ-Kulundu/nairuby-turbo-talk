@@ -1,3 +1,4 @@
+<%= turbo_stream_from "todos" %>
 <%= turbo_frame_tag "first_frame" do%>
     <div class="flex justify-between">
         <h1 class="text-2xl font-bold tracking-wide">Todos</h1>
@@ -9,6 +10,6 @@
 
 <%= turbo_frame_tag Todo.new %>
 
-<%= turbo_frame_tag "todos", class: "flex flex-col space-y-4" do%>
+<%= turbo_frame_tag :todos, class: "flex flex-col space-y-4" do%>
     <%= render @todos %>
 <%end%>
