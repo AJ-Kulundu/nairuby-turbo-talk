@@ -28,7 +28,10 @@ class TodosController < ApplicationController
     def update
         @todo = Todo.find(params[:id])
         if @todo.update(todo_params)
-            redirect_to todo_path(@todo)
+            respond_to do |format|
+                format.html {redirect_to todo_path(@todo)}
+                format.turbo_stream
+            end
         else
             render :edit
         end
