@@ -9,4 +9,6 @@
 
 <%= turbo_frame_tag Todo.new %>
 
-<%= render @todos %>
+<%= turbo_frame_tag "todos", class: "flex flex-col space-y-4" do%>
+    <%= render @todos %>
+<%end%>
