@@ -1,3 +1,5 @@
 <h1 class="text-2xl font-bold">New Todo<h1>
 
-<%= render "form", todo: @todo%>
+<%= turbo_frame_tag @todo do%>
+    <%= render "form", todo: @todo%>
+<%end%>

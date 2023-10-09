@@ -1,6 +1,8 @@
-<%= turbo_frame_tag "empty_todo", class:"only:flex hidden flex-col space-y-4 w-full justify-center py-10 border-2 border-dashed" do%>  
-    <p class="text-center text-2xl font-bold">No Todos Yet</p>
-    <div class="text-center">
-        <%= link_to "+ New Todo", new_todo_path,class: "px-4 py-2 bg-lime-500 rounded-lg" %>
+<%= turbo_frame_tag "empty_todo", class:"only:flex hidden flex-col" do%> 
+    <div class="flex flex-col space-y-4 w-full justify-center py-10 border-2 border-dashed">
+        <p class="text-center text-2xl font-bold">No Todos Yet</p>
+        <div class="text-center">
+            <%= link_to "+ New Todo", new_todo_path, data:{turbo_frame:dom_id(Todo.new)},class: "px-4 py-2 bg-lime-500 rounded-lg" %>
+        </div>
     </div>
 <%end%>
