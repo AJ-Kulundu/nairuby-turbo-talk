@@ -8,7 +8,7 @@
 <hr class="border-2 border-black mb-4"/>
 <%=turbo_frame_tag Todo.new%>
 
-<div class="flex flex-col">
+<%= turbo_frame_tag :todos, class: "flex flex-col" do%>
     <%= render "empty_state" %>
     <%= render @todos%>
-</div>
+<%end%>
