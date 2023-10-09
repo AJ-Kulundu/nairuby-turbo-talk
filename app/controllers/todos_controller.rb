@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
 
     def index
-        @todos = Todo.all
+        @todos = Todo.ordered
     end
 
     def show
