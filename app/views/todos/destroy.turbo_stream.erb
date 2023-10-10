@@ -1,1 +1,3 @@
 <%= turbo_stream.remove @todo %>
+
+<%= turbo_stream.update "total", Todo.count%>

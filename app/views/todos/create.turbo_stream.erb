@@ -1,2 +1,4 @@
 <%= turbo_stream.prepend "quotes",@todo %>
 <%= turbo_stream.update Todo.new, "" %>
+
+<%= turbo_stream.update "total", Todo.count%>
