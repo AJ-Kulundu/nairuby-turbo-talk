@@ -9,7 +9,7 @@
 
 <%= turbo_frame_tag Todo.new %>
 
-<div class="flex flex-col">
+<%= turbo_frame_tag :quotes, class: "flex flex-col" do %>
     <%= render "empty_state" %>
     <%= render @todos%>
-</div>
+<%end%>
