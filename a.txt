@@ -1,0 +1,9 @@
+<turbo-stream action="replace" target="todo_96"><template><turbo-frame id="todo_96">
+<div class="flex flex-row justify-between my-2">
+    <a data-turbo-frame="_top" class="text-xl font-semibold" href="/todos/96">world edit</a>
+    <div class="flex flex-row justify-between space-x-4">
+        <a class="px-4 py-2 bg-amber-500 rounded-lg" href="/todos/96/edit">Edit</a>
+        <form class="button_to" method="post" action="/todos/96"><input type="hidden" name="_method" value="delete" autocomplete="off" /><button data-turbo-confirm="Are you sure?" class="px-4 py-2 bg-red-500 rounded-lg" type="submit">Delete</button><input type="hidden" name="authenticity_token" value="B06TwLt_QGCBS4RoyvDbrkbjp9ezLynrBO0ZXY-7arSJq4AIVnedjBnXY0XdqvnRaC1bxOzZ4D5hRpYvwWx5zQ" autocomplete="off" /></form>
+    </div>
+</div>
+</turbo-frame></template></turbo-stream>

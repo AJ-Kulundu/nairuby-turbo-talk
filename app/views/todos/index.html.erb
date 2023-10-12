@@ -1,11 +1,18 @@
-<div class="flex justify-between">
-    <h1 class="text-2xl font-bold tracking-wide">Todos</h1>
-    <%= link_to "New Todo", new_todo_path, class: "px-4 py-2 bg-lime-500 rounded-lg" %>
-</div>
+<%=turbo_stream_from "todos"%>
+<%= turbo_frame_tag "first_frame" do %>
+    <div class="flex justify-between">
+        <h1 class="text-2xl font-bold tracking-wide">Todos</h1>
+        <%= link_to "New Todo", new_todo_path, data: {turbo_frame: "new_todo"},class: "px-4 py-2 bg-lime-500 rounded-lg" %>
+    </div>
+<%end%>
 
 <hr class="border-2 border-black mb-4"/>
 
-<div class="flex flex-col">
+<%= turbo_frame_tag Todo.new%>
+
+<div id="todos" class="flex flex-col">
     <%= render "empty_state" %>
     <%= render @todos%>
 </div>
+
+<%= render "total", todo: @todos %>

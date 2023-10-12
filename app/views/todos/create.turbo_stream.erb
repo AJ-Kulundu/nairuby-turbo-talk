@@ -1,0 +1,3 @@
+<%= turbo_stream.prepend "todos", @todo %>
+<%= turbo_stream.update Todo.new, "" %>
+<%= turbo_stream.update "total", Todo.size%>
