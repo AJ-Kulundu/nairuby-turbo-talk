@@ -13,6 +13,6 @@ class Todo < ApplicationRecord
     after_destroy_commit { broadcast_update_to "todos", target: "total",html: Todo.size  }
 
     def self.size
-        Todo.count      
+        Todo.all.size      
     end
 end
